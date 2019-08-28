@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfApp5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <TextBlock FontSize="15" HorizontalAlignment="Left" Margin="107,90,0,0" TextWrapping="Wrap" Text="Text:" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="28" Margin="148,90,0,0" TextWrapping="Wrap" Text="I LOVE WPF" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-0.023,0.213"/>
+        <TextBlock HorizontalAlignment="Left" Margin="27,152,0,0" TextWrapping="Wrap" Text="Width" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="27,186,0,0" TextWrapping="Wrap" Text="Height" VerticalAlignment="Top"/>
+        <Slider x:Name="sld1" Minimum="1" Maximum="130" HorizontalAlignment="Left" Margin="89,152,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.48,0.781" Width="261" SmallChange="1"/>
+        <Slider x:Name="sld2" HorizontalAlignment="Left" Margin="89,186,0,0" VerticalAlignment="Top" Width="261"/>
+        <TextBlock  Text="{Binding ElementName=sld1, Path=Value}" x:Name="txtblk1" HorizontalAlignment="Left" Margin="371,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="18" Width="59" RenderTransformOrigin="0.264,-0.582"/>
+        <TextBlock x:Name="txtblk2" HorizontalAlignment="Left" Margin="371,186,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top"/>
+        <Button Content="I LOVE WPF" FontSize="{Binding ElementName=sld1, Path=Value}" HorizontalAlignment="Left" Margin="227,240,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBlock HorizontalAlignment="Left" Margin="436,154,0,0" TextWrapping="Wrap" Text="SMALL" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="435,186,0,0" TextWrapping="Wrap" Text="SMALL" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
